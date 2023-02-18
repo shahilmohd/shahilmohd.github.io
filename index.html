@@ -8,11 +8,10 @@
     <title>SQL Injection | 20BCE2356</title>
   </head>
   <body>
-    <div class="container">
+
       <form
         name="f1"
         action="auth.php"
-        onsubmit="return validation()"
         class="form"
         method="post"
       >
@@ -33,26 +32,7 @@
         />
         <input type="submit" value="Sign In" id="submit" />
       </form>
-    </div>
 
-    <script>
-      function validation() {
-        var id = document.f1.user.value;
-        var ps = document.f1.password.value;
-        if (id.length == "" && ps.length == "") {
-          alert("User Name and Password fields are empty");
-          return false;
-        } else {
-          if (id.length == "") {
-            alert("User Name is empty");
-            return false;
-          }
-          if (ps.length == "") {
-            alert("Password field is empty");
-            return false;
-          }
-        }
-      }
-    </script>
+    
   </body>
 </html>
